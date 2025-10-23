@@ -1,0 +1,20 @@
+/* Reset & basics */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica', sans-serif; }
+body { scroll-behavior: smooth; }
+
+/* Sections */
+section { min-height: 100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:50px; }
+
+/* Intro */
+#intro { background: linear-gradient(to right, #fddb92, #d1fdff); color:#333; }
+#intro h1 { font-size:3rem; margin-bottom:20px; }
+#intro p { font-size:1.5rem; }
+
+/* Articles */
+#articles { background:#ffe6e6; }
+.article-teaser { margin:15px 0; padding:15px; background:white; width:80%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+
+/* Art */
+#art { background:#e6f7ff; }
+.art-grid { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+.art-grid img { width:250px; height:auto; border-radius:10px; box-shadow:0 4px 10px r
