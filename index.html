@@ -7,13 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Intro Section -->
+   <!-- Intro Section -->
     <section id="intro">
         <h1>Welcome to my gallery, mtfker</h1>
         <p>Art, articles, and music all in one place.</p>
         <button id="playBtn">Play Intro Song</button>
-        <audio id="introSong" src="intro.mp3" autoplay></audio>
+        <audio id="introSong" src="intro.mp3"></audio>
     </section>
+
+    <script>
+        const song = document.getElementById("introSong");
+        document.getElementById("playBtn").onclick = () => {
+            song.volume = 1;
+            song.currentTime = 0;
+            song.play();
+        setTimeout(() => {
+            const fade = setInterval(() => {
+                song.volume = Math.max(0, song.volume - 0.05);
+                if (song.volume === 0) { song.pause(); clearInterval(fade); }
+      }, 300);
+    }, 10000);
+  };
+    </script>
+
 
     <!-- Articles Teaser -->
     <section id="articles">
